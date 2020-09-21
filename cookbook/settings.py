@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'l*o!abx#sq=aqze=wpn%-q_$+4=v73zh0hasjn^skv%&w1b1nk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["test-mzwbacd5xa-an.a.run.app"]
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ingredients',
     'graphene_django',
+    'graphql_playground'
 ]
 
 MIDDLEWARE = [
@@ -105,9 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
@@ -124,3 +125,8 @@ STATIC_URL = '/static/'
 GRAPHENE = {
     'SCHEMA': 'schema.schema'
 }
+
+try:
+    from cookbook.settings_dev import *  # or specific overrides
+except Exception as err:
+    print("Production Mode")

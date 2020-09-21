@@ -9,6 +9,8 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    # id = graphene.ID(source='pk', required=True)
+
 
 class Ingredient(models.Model):
     name = models.CharField(max_length=100)
