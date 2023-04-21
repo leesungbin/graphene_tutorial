@@ -19,7 +19,7 @@ pytz==2019.3
 Rx==1.6.1
 singledispatch==3.4.0.3
 six==1.13.0
-sqlparse==0.3.0
+sqlparse==0.4.4
 typed-ast==1.4.0
 utils==1.0.1
 wrapt==1.11.2
